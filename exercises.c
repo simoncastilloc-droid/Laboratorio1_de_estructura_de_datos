@@ -58,7 +58,7 @@ List* crea_lista()
    {
       int *elemento =malloc(sizeof(int)); //reservo memoria para el elemento actual
       *elemento = i ;// el elemento sera del 1 al 10
-      pushback(L,elemento); // devuelvo al final de la lista el elemento
+      pushBack(L,elemento); // devuelvo al final de la lista el elemento
    }
    
    return L; //devuelvo la lista
