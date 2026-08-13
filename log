@@ -2,3 +2,14 @@ Thu Aug 13 09:34:41 PM UTC 2026:
  tests:  0|5
 total_score: 0/70
 9af6f4a
+Thu Aug 13 10:01:30 PM UTC 2026: 
+ exercises.c | 58 ++++++++++++++++++++++++++++++++++++++++++++++++----------
+ 1 file changed, 48 insertions(+), 10 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:61:7: error: implicit declaration of function ‘pushback’; did you mean ‘pushBack’? [-Wimplicit-function-declaration]
+   61 |       pushback(L,elemento); // devuelvo al final de la lista el elemento
+      |       ^~~~~~~~
+      |       pushBack
+bf2800e
