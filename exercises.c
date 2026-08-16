@@ -110,7 +110,6 @@ void eliminaElementos(List*L, int elem)
          elemento=(int*)next(L);
       }
    }
-
 }
 
 /*
@@ -147,10 +146,29 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 
 int parentesisBalanceados(char *cadena) 
 {
+   Stack* P = create_stack();
 
-
-
+   for(int i=0;cadena[i]!='\0';i++)
+   {
+      if(cadena[i]=='(')
+      {
+         push(P,&cadena[i]);
+      }
+      else if(cadena==')')
+      {
+         if(top(P)==NULL)
+         {
+            return 0;
+         }
+         pop(P);
+      }
+   }
    
+   if(top(P)==NULL)
+   {
+      return 1;
+   }
    return 0;
+
 }
 
