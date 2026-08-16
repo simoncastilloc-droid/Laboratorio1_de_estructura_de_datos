@@ -41,3 +41,21 @@ Sun Aug 16 02:25:42 AM UTC 2026:
  tests:  3|2
 total_score: 40/70
 92dffa3
+Sun Aug 16 02:31:48 AM UTC 2026: 
+ exercises.c | 18 +++++++++++++-----
+ 1 file changed, 13 insertions(+), 5 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:125:15: error: ‘createStack’ undeclared (first use in this function); did you mean ‘create_stack’?
+  125 |    Stack* aux=createStack;
+      |               ^~~~~~~~~~~
+      |               create_stack
+exercises.c:125:15: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:137:24: error: expected ‘;’ before ‘}’ token
+  137 |       push(P2,elemento)
+      |                        ^
+      |                        ;
+  138 |    }
+      |    ~                    
+01b7eb6
