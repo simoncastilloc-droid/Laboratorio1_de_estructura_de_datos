@@ -59,3 +59,15 @@ exercises.c:137:24: error: expected ‘;’ before ‘}’ token
   138 |    }
       |    ~                    
 01b7eb6
+Sun Aug 16 02:32:17 AM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:125:15: error: ‘createStack’ undeclared (first use in this function); did you mean ‘create_stack’?
+  125 |    Stack* aux=createStack;
+      |               ^~~~~~~~~~~
+      |               create_stack
+exercises.c:125:15: note: each undeclared identifier is reported only once for each function it appears in
+9acb8f0
