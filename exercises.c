@@ -119,9 +119,21 @@ El orden de ambas pilas se debe mantener.
 Puedes usar una pila auxiliar.
 */
 
-void copia_pila(Stack* P1, Stack* P2) 
+void copia_pila(Stack* P1, Stack* P2)
 {
-   
+   Stack* aux=create_stack();
+   void* elemento;
+   while((elemento=top(P1))!=NULL)
+   {
+      push(aux,elemento);
+      pop(P1)
+   }
+   while((elemento=top(aux))!=NULL)
+   {
+      push(P1,elemento);
+      pop(aux);
+      push(P2,elemento);
+   }
 }
 
 /*
@@ -133,6 +145,31 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 
 int parentesisBalanceados(char *cadena) 
 {
+   Stack* P = create_stack();
+   for(int i=0;cadena[i]!='\0';i++)
+   {
+      if(cadena[i]=='('||cadena[i]=='['||cadena[i]=='{')
+      {
+         push(P,&cadena[i]);
+      }
+      else if(cadena[i]==')'||cadena[i]==']'||cadena[i]=='}')
+      {
+         char *tope=(char *)top(P);
+         if(tope==NULL)
+         {
+            return 0;
+         }
+         if ((cadena[i]==')'&&*tope!='(')||(cadena[i]==']'&&*tope!='[')||(cadena[i]=='}'&&*tope!='{'))
+         {
+            return 0;
+         }
+         pop(P);
+      }
+   }
+   if(top(P)==NULL)
+   {
+      return 1;
+   }
    
    return 0;
 
