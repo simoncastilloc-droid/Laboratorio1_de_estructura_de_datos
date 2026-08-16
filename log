@@ -29,3 +29,9 @@ exercises.c:75:4: error: expected ‘,’ or ‘;’ before ‘int’
    75 |    int *elemento = (int*) first(L)
       |    ^~~
 59b94a3
+Sun Aug 16 02:17:17 AM UTC 2026: 
+ exercises.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+ tests:  2|3
+total_score: 20/70
+86411de
